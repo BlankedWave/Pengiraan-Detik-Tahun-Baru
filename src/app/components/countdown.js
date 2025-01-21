@@ -116,7 +116,7 @@ const NewYear = () => {
         <div className="min-h-screen bg-gradient-to-b from-blue-900 to-black text-white flex flex-col items-center justify-center p-4">
             <div className={`transition-all duration-500 ${showFireworks ? 'scale-110' : 'scale-100'}`}>
                 <h1 className="text-6xl font-bold mb-8 text-center animate-pulse">
-                    {isNewYear ? `Happy New Year ${nextYear}! 🎉` : `Welcome ${nextYear}!`}
+                    {isNewYear ? `Selamat Tahun Baru ${nextYear}! 🎉` : `Selamat Datang ${nextYear}!`}
                     <Stars className="inline ml-4 text-yellow-400" />
                 </h1>
             </div>
@@ -124,7 +124,7 @@ const NewYear = () => {
             <div className="text-2xl mb-12 text-center">
                 {!isNewYear ? (
                     <>
-                        <p className="mb-4">Countdown to New Year <div>({TIMEZONE_NAME} Time)</div></p>
+                        <p className="mb-4">Pengiraan Detik Untuk Waktu <div>(Waktu {TIMEZONE_NAME})</div></p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {Object.entries(timeLeft).map(([unit, value]) => (
                                 <div key={unit} className="bg-blue-800 bg-opacity-50 p-4 rounded-lg">
@@ -135,7 +135,7 @@ const NewYear = () => {
                         </div>
                     </>
                 ) : (
-                    <p className="text-4xl font-bold animate-bounce">Let's Celebrate! 🎊</p>
+                    <p className="text-4xl font-bold animate-bounce">Ayuh Raikan! 🎊</p>
                 )}
             </div>
 
@@ -145,30 +145,30 @@ const NewYear = () => {
                         onClick={triggerFireworks}
                         className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-full transform transition-transform hover:scale-105 active:scale-95"
                     >
-                        Preview Celebration! 🎉
+                        Pratonton Sambutan! 🎉
                     </button>
                 )}
 
-                <div className="mt-8 space-y-4">
-                    <h2 className="text-2xl font-semibold">New Year Resolutions</h2>
-                    <ul className="text-lg space-y-2">
-                        <li className="flex items-center justify-center">
-                            <span className="mr-2">🎯</span> Achieve Your Goals
-                        </li>
-                        <li className="flex items-center justify-center">
-                            <span className="mr-2">💪</span> Stay Healthy
-                        </li>
-                        <li className="flex items-center justify-center">
-                            <span className="mr-2">📖</span> Learn Something New
-                        </li>
-                        <li className="flex items-center justify-center">
-                            <span className="mr-2">❤️</span> Spread Joy
-                        </li>
-                        <li className="flex items-center justify-center">
-                            <span className="mr-2">🧑🏻‍💻</span> May you code be bug-free!
-                        </li>
-                    </ul>
-                </div>
+                // <div className="mt-8 space-y-4">
+                //     <h2 className="text-2xl font-semibold">New Year Resolutions</h2>
+                //     <ul className="text-lg space-y-2">
+                //         <li className="flex items-center justify-center">
+                //             <span className="mr-2">🎯</span> Achieve Your Goals
+                //         </li>
+                //         <li className="flex items-center justify-center">
+                //             <span className="mr-2">💪</span> Stay Healthy
+                //         </li>
+                //         <li className="flex items-center justify-center">
+                //             <span className="mr-2">📖</span> Learn Something New
+                //         </li>
+                //         <li className="flex items-center justify-center">
+                //             <span className="mr-2">❤️</span> Spread Joy
+                //         </li>
+                //         <li className="flex items-center justify-center">
+                //             <span className="mr-2">🧑🏻‍💻</span> May you code be bug-free!
+                //         </li>
+                //     </ul>
+                // </div>
 
                 {showFireworks && <FireworksDisplay key={fireworksKey} count={isNewYear ? 12 : 8} />}
             </div>
