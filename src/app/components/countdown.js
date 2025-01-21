@@ -149,27 +149,6 @@ const NewYear = () => {
                     </button>
                 )}
 
-                // <div className="mt-8 space-y-4">
-                //     <h2 className="text-2xl font-semibold">New Year Resolutions</h2>
-                //     <ul className="text-lg space-y-2">
-                //         <li className="flex items-center justify-center">
-                //             <span className="mr-2">🎯</span> Achieve Your Goals
-                //         </li>
-                //         <li className="flex items-center justify-center">
-                //             <span className="mr-2">💪</span> Stay Healthy
-                //         </li>
-                //         <li className="flex items-center justify-center">
-                //             <span className="mr-2">📖</span> Learn Something New
-                //         </li>
-                //         <li className="flex items-center justify-center">
-                //             <span className="mr-2">❤️</span> Spread Joy
-                //         </li>
-                //         <li className="flex items-center justify-center">
-                //             <span className="mr-2">🧑🏻‍💻</span> May you code be bug-free!
-                //         </li>
-                //     </ul>
-                // </div>
-
                 {showFireworks && <FireworksDisplay key={fireworksKey} count={isNewYear ? 12 : 8} />}
             </div>
         </div>
