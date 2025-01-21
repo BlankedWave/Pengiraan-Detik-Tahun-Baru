@@ -43,10 +43,10 @@ const FireworksDisplay = ({ count = 8 }) => {
 
 const NewYear = () => {
     const [timeLeft, setTimeLeft] = useState({
-        hari: 0,
-        jam: 0,
-        minit: 0,
-        saat: 0
+        days: 0,
+        hourse: 0,
+        minutes: 0,
+        seconds: 0
     });
 
     const [showFireworks, setShowFireworks] = useState(false);
@@ -73,10 +73,10 @@ const NewYear = () => {
 
             if (difference > 0) {
                 setTimeLeft({
-                    hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minit: Math.floor((difference / 1000 / 60) % 60),
-                    saat: Math.floor((difference / 1000) % 60)
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60)
                 });
                 setNextYear(currentYear + 1);
                 setIsNewYear(false);
