@@ -43,10 +43,10 @@ const FireworksDisplay = ({ count = 8 }) => {
 
 const NewYear = () => {
     const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
+        hari: 0,
+        jam: 0,
+        minit: 0,
+        saat: 0
     });
 
     const [showFireworks, setShowFireworks] = useState(false);
@@ -65,7 +65,7 @@ const NewYear = () => {
             // Calculate next new year in target timezone
             const currentYear = targetTime.getFullYear();
             const nextNewYear = new Date(currentYear + 1, 0, 1);
-            nextNewYear.setHours(0, 0, 0, 0);
+            nextNewYear.setjam(0, 0, 0, 0);
 
             // Convert next new year to local time for comparison
             const nextNewYearLocal = new Date(nextNewYear.getTime() - totalOffset * 60 * 1000);
@@ -73,15 +73,15 @@ const NewYear = () => {
 
             if (difference > 0) {
                 setTimeLeft({
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minutes: Math.floor((difference / 1000 / 60) % 60),
-                    seconds: Math.floor((difference / 1000) % 60)
+                    hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minit: Math.floor((difference / 1000 / 60) % 60),
+                    saat: Math.floor((difference / 1000) % 60)
                 });
                 setNextYear(currentYear + 1);
                 setIsNewYear(false);
             } else {
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                setTimeLeft({ hari: 0, jam: 0, minit: 0, saat: 0 });
                 setIsNewYear(true);
                 setNextYear(currentYear + 1);
                 triggerAutomaticFireworks();
