@@ -116,7 +116,7 @@ const NewYear = () => {
         <div className="min-h-screen bg-gradient-to-b from-blue-900 to-black text-white flex flex-col items-center justify-center p-4">
             <div className={`transition-all duration-500 ${showFireworks ? 'scale-110' : 'scale-100'}`}>
                 <h1 className="text-6xl font-bold mb-8 text-center animate-pulse">
-                    {isNewYear ? `Selamat Tahun Baru ${nextYear}! 🎉` : `Selamat Datang ${nextYear}!`}
+                    {isNewYear ? `Selamat Tahun Baru ${nextYear}! 🎉` : `Sekarang Adalah Tahun ${nextYear}!`}
                     <Stars className="inline ml-4 text-yellow-400" />
                 </h1>
             </div>
@@ -124,7 +124,7 @@ const NewYear = () => {
             <div className="text-2xl mb-12 text-center">
                 {!isNewYear ? (
                     <>
-                        <p className="mb-4">Pengiraan Detik Untuk Waktu <div>(Waktu {TIMEZONE_NAME})</div></p>
+                        <p className="mb-4">Pengiraan Detik Untuk<div>(Waktu {TIMEZONE_NAME})</div></p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {Object.entries(timeLeft).map(([unit, value]) => (
                                 <div key={unit} className="bg-blue-800 bg-opacity-50 p-4 rounded-lg">
