@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ramddan Rosli",
-  description: "New Year Countdown Page",
+  title: "Tahun Baru",
+  description: "Kira Detik Tahun Baru",
 };
 
 export default function RootLayout({ children }) {
