@@ -43,10 +43,10 @@ const FireworksDisplay = ({ count = 8 }) => {
 
 const NewYear = () => {
     const [timeLeft, setTimeLeft] = useState({
-        hari: 0,
-        jam: 0,
-        minit: 0,
-        saat: 0
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
     });
 
     const [showFireworks, setShowFireworks] = useState(false);
