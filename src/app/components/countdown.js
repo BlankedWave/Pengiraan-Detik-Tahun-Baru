@@ -43,10 +43,10 @@ const FireworksDisplay = ({ count = 8 }) => {
 
 const NewYear = () => {
     const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hourse: 0,
-        minutes: 0,
-        seconds: 0
+        hari: 0,
+        jam: 0,
+        minit: 0,
+        saat: 0
     });
 
     const [showFireworks, setShowFireworks] = useState(false);
@@ -81,7 +81,7 @@ const NewYear = () => {
                 setNextYear(currentYear + 1);
                 setIsNewYear(false);
             } else {
-                setTimeLeft({ hari: 0, jam: 0, minit: 0, saat: 0 });
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
                 setIsNewYear(true);
                 setNextYear(currentYear + 1);
                 triggerAutomaticFireworks();
